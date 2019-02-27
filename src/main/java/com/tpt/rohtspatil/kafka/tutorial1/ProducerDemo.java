@@ -7,7 +7,7 @@ import org.apache.kafka.common.serialization.StringSerializer;
 
 import java.util.Properties;
 
-public class ProducerDemo1 {
+public class ProducerDemo {
   public static void main(String[] args) {
     String bootStrapServers = "127.0.0.1:9092";
 
