@@ -1,4 +1,4 @@
-package com.tpt.rohtspatil.kafka.tutorial1;
+package kafka.tutorial1;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -12,15 +12,15 @@ import java.time.Duration;
 import java.util.Arrays;
 import java.util.Properties;
 
-public class ConsumerDemoGroups {
+public class ConsumerDemo {
 
   public static void main(String[] args) {
 
     String bootStrapServers = "127.0.0.1:9092";
-    String groupId = "my-fifth-application";
+    String groupId = "my-fourth-application";
     String topic = "first_topic";
 
-    Logger logger = LoggerFactory.getLogger(ConsumerDemoGroups.class);
+    Logger logger = LoggerFactory.getLogger(ConsumerDemo.class);
 
     // create consumer config
     Properties properties = new Properties();

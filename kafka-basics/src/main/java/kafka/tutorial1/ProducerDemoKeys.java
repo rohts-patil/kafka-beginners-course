@@ -1,4 +1,4 @@
-package com.tpt.rohtspatil.kafka.tutorial1;
+package kafka.tutorial1;
 
 import org.apache.kafka.clients.producer.Callback;
 import org.apache.kafka.clients.producer.KafkaProducer;
@@ -11,11 +11,11 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Properties;
 
-public class ProducerDemoWithCallBack {
+public class ProducerDemoKeys {
 
   public static void main(String[] args) {
 
-    final Logger logger = LoggerFactory.getLogger(ProducerDemoWithCallBack.class);
+    final Logger logger = LoggerFactory.getLogger(ProducerDemoKeys.class);
 
     String bootStrapServers = "127.0.0.1:9092";
 
@@ -32,8 +32,11 @@ public class ProducerDemoWithCallBack {
 
     for (int i = 0; i < 10; i++) {
       // create producer record
-      ProducerRecord<String, String> record =
-          new ProducerRecord<String, String>("first_topic", "Hello World" + Integer.toString(i));
+
+      String topic = "first_topic";
+      String key = "id_" + Integer.toString(i);
+      String value = "Hello World" + Integer.toString(i);
+      ProducerRecord<String, String> record = new ProducerRecord<String, String>(topic, key, value);
 
       // send data async
       producer.send(
