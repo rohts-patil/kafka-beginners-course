@@ -37,7 +37,7 @@ public class TwitterProducer {
 
   private String secret = "XXXXXX";
 
-  List<String> terms = Lists.newArrayList("kafka");
+  private List<String> terms = Lists.newArrayList("machine learning","ai");
 
   public TwitterProducer() {}
 
